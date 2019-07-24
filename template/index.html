@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Go Compiler</title>
+	<link rel="stylesheet" type="text/css" href="/assets/index/css/main.css">
+</head>
+<body>
+	<div class="heading">
+		<p id="main">Go Compiler</p>
+		<p>A partial compiler(lexical analyzer) with error reporting and error recovery for Go(Golang) developed using C, Flex & Bison.</p>
+	</div>
+	<div class="work-area">
+		<div class="lhs">
+			<form class="form" action="/compile" method="post">
+				<textarea class='custom-textarea' name="code" placeholder="Type your Go code here...">{{if .}}{{ .Code }}{{else}}{{end}}</textarea>
+				<button class="run button button-run">
+					Run
+				</button>
+			</form>
+			<a href="/">
+				<button class="button button-reset">
+					Reset
+				</button>
+			</a>
+		</div>
+		<div class="rhs">
+			<div class="term">
+				<div class="term-header">
+					<button class="term-header-button term-header-button-close"></button>
+					<button class="term-header-button term-header-button-minimize"></button>
+					<button class="term-header-button term-header-button-expand"></button>
+					<div class="term-header-title">
+						<span>nishchayp@Nishchay-Parashar-macbook-pro: ~ (go-compiler)</span>
+					</div>
+				</div>
+				<div class="term-content">
+				{{if .}}
+				<span class="term-content-arrow">➜</span> <span class="term-content-tilde">~</span></span><span>{{ .Output }}</span><br>
+				{{end}}
+				<span class="term-content-arrow">➜</span> <span class="term-content-tilde">~</span> <span class="term-content-caret"></span>
+				</div>
+			</div>
+			<div class="note">
+				<ul>
+					<li>The compiler is based on a slightly minified version of the grammar from the official Go documentation.</li>
+					<li>Actual Go compiler, lexer and fmt tool work together to automatically inserts/removes semicolons, line breaks and other such symbols to regularize the code. Please note this compiler(for now) does not account for these optimizations and follows the defined grammar strictly.</li>
+					<li><a href="/assets/examples">Here</a> are some example go code. You can cross check the correctness of the compiler through <a href="https://play.golang.org/">Go Playground</a>.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
