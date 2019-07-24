@@ -1,0 +1,3 @@
+[submodule "go-compiler"]
+	path = go-compiler
+	url = https://github.com/nishchayp/go-compiler
