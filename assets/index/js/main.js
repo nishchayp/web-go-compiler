@@ -37,8 +37,4 @@ class CustomTextarea {
 
 const textarea = new CustomTextarea(document.querySelector('.custom-textarea'));
 
-​function getline()
-{
-    var t = $("#t")[0];
-    alert(t.value.substr(0, t.selectionStart).split("\n").length);
-}​
+​

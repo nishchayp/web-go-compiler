@@ -17,7 +17,7 @@ func Run() {
 
 	router.ServeFiles("/assets/*filepath", http.Dir("assets"))
 
-	log.Println("Server listening at port 8100")
-	log.Fatal(http.ListenAndServe(":8100", router))
+	log.Println("Server listening at port 8001")
+	log.Fatal(http.ListenAndServe(":8001", router))
 
 }
